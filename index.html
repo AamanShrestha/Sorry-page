@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorry - Only For You</title>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ff9a9e,#fecfef);font-family:sans-serif;padding:20px}
+.card{background:white;padding:28px;border-radius:22px;max-width:380px;width:100%;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.15)}
+input{padding:12px;width:80%;border:2px solid #ffb3c1;border-radius:25px;text-align:center;margin-top:12px}
+button{background:#ff4d6d;color:white;border:none;padding:12px 28px;border-radius:25px;margin-top:15px;width:85%;font-weight:bold}
+#content{display:none}
+</style>
+</head>
+<body>
+<div class="card">
+<div id="lock">
+<div style="font-size:45px">🔒</div>
+<h2>Private Message</h2>
+<p>Only for you - Enter password</p>
+<input type="password" id="pw" placeholder="password is: sorry">
+<button onclick="check()">Unlock ❤️</button>
+<p id="err" style="color:red;display:none">Wrong password</p>
+</div>
+<div id="content">
+<h2 style="color:#ff4d6d">I'm Sorry 🥺</h2>
+<p style="line-height:1.7;color:#444">
+I'm truly sorry for the little lies which I told you. I never wanted to hurt you or make you feel you couldn't trust me.<br><br>
+You are one of the sweetest, cutest, kindest people I ever met. You mean so much to me.<br><br>
+Please forgive me? I promise to be honest from now on.
+</p>
+<button onclick="document.getElementById('ty').style.display='block'">Forgive Me? 🙏</button>
+<p id="ty" style="display:none;color:#ff4d6d;font-weight:bold;margin-top:15px">Thank you ❤️ It means the world to me!</p>
+</div>
+</div>
+<script>
+function check(){
+if(document.getElementById('pw').value.toLowerCase()==='sorry'){
+document.getElementById('lock').style.display='none';
+document.getElementById('content').style.display='block';
+}else{document.getElementById('err').style.display='block';}
+}
+</script>
+</body>
+</html>
